@@ -8,10 +8,12 @@
 <body>
     <h1>Criar conta</h1>
 
-    <form action="auth/cadastro" method="post">
-        Nome: <input type="text" name="nome" required><br><br>
-        Email: <input type="email" name="email" required><br><br>
-        Senha: <input type="password" name="senha" required><br><br>
+    <form action="/auth/cadastro" method="post">
+        Nome: <input type="text" name="nome" required>
+        <br><br>
+        Email: <input type="email" name="email" required>
+        <br><br>
+        Senha: <input type="password" name="senha" ><br><br>
         <button type="submit">Cadastrar</button>
     </form>
     <p>Já tem uma conta? <a href="/auth/login">Entrar</a></p>
