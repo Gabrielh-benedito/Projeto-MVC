@@ -81,7 +81,7 @@ def get_usuario_opcional(request: Request):
         return None
     
 #Dependencia que exige login e perfil de admin
-def get_usuario_admin(request: Request):
+def get_admin(request: Request):
     usuario = get_usuario_logado(request)
     if usuario.get("role") != "admin":
         raise HTTPException(
