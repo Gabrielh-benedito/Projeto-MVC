@@ -6,6 +6,9 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from app.auth import get_usuario_opcional
 from app.controllers import auth_controller
 from app.controllers import usuario_controller
+from app.controllers import categoria_controller
+from app.controllers import produto_controller
+
 
 
 app = FastAPI(title="Sistema de Ponto de venda")
@@ -19,7 +22,8 @@ templates = Jinja2Templates(directory="app/templates")
 #Incluir os routers dos controladores
 app.include_router(auth_controller.router)
 app.include_router(usuario_controller.router)
-
+app.include_router(categoria_controller.router)
+app.include_router(produto_controller.router)
 @app.get("/")
 def tela_inicial(
     Request: Request,
