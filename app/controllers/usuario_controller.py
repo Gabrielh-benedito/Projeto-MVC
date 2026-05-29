@@ -1,6 +1,3 @@
-# controllers/usuario_controller.py — Gerenciamento de usuários
-# Rotas acessíveis apenas por administradores.
-
 
 from fastapi import APIRouter, Depends, Request, Form, status
 from fastapi.responses import RedirectResponse
@@ -10,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.models.usuarios import Usuario
 from app.auth import get_admin, hash_senha
+
 
 
 router = APIRouter(prefix="/usuarios", tags=["Usuários"])
